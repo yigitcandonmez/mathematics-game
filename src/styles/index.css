@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+:root {
+    --red: #FF0000;
+    --default: #2D2D2D;
+    --white: #FFFFFF;
+    --green: #00BF63;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    background-color:  var(--default);
+    color: var(--white);
+    font-family: 'Handlee';
+    font-size: 10px;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    min-height: 100vh;
+}
+
+/* General */
+
+.red {
+    background-color: var(--red);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.page {
+    height: 100%;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.small-btn {
+    cursor: pointer;
+}
+
+.pad-tb-2 {
+    padding: 2.4rem 0;
+}
+
+.font-5 {
+    font-size: 5.2rem;
+}
+
+.font-6 {
+    font-size: 6.4rem;
+}
+
+.font-8 {
+    font-size: 8.2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.button {
+    position: relative;
+}
+
+.button > p {
+    position: absolute;
+}
+
+/* General End */
+
+/* Pages */
+
+.page-game {
+    padding: 2rem 2rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page-game-left {
+    flex: 1;
+    height: 100%;
+}
+
+.page-game-right {
+    flex: 1;
+    height: 100%;
+}
+
+.page-game-left svg {
+    width: 100%;
+    height: 100%;
+}
+
+.page-game-left .svg-text {
+    font-size: 9.4rem;
+    fill: white;
+}
+ 
+
+.page-game-info h2 {
+    font-size: 2.3vw;
+    padding: 0 1.4rem;
+}
+
+.infoBox-info {
+    text-align: center;
+}
+
+.page-game-answers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin-top: 4rem;
+}
+
+.page-game-answers .answer {
+    width: 100%;
+    height: 100%;
+    min-height: 152px;
+    padding: 1rem 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#button0 {
+    position: absolute;
+    left: 10%;
+    bottom: -45%;
+    z-index: 1;
+}
+
+#button1 {
+    position: absolute;
+    right: 10%;
+}
+
+#button2 {
+    position: absolute;
+    left: 25%;
+    top: -25%;
+}
+
+.page-game-answers .answer .small-btn {
+    width: 30%;
+    height: 100%;
+}
+
+.page-game-answers .answer .small-btn svg{
+    width: 100%;
+    height: 100%;
+}
+
+.page-final {
+    justify-content: space-evenly;
+}
+
+.question span {
+    padding-left: 2rem;
+}
+/* Pages End */
