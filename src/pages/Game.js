@@ -46,14 +46,14 @@ const Game = () => {
         return {
           Total_Point: prevInfo.Total_Point + question?.score,
           Correct_Answers: prevInfo.Correct_Answers + 1,
-          Total_Questions: prevInfo.Total_Questions + 1
+          Total_Questions: prevInfo.Total_Questions + 1 !== 11 ? prevInfo.Total_Questions + 1 : prevInfo.Total_Questions
         }
       })
     } else if (typeof currentAnswer !== "undefined" && currentAnswer !== question?.correctAnswer) {
       setCurrentInfo((prevInfo) => {
         return {
           ...prevInfo,
-          Total_Questions: prevInfo.Total_Questions + 1
+          Total_Questions: prevInfo.Total_Questions + 1 !== 11 ? prevInfo.Total_Questions + 1 : prevInfo.Total_Questions
         }
       })
     }

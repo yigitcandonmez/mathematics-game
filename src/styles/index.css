@@ -46,6 +46,10 @@ a {
     color: var(--white);
 }
 
+svg {
+    pointer-events: none;
+}
+
 .small-btn {
     cursor: pointer;
 }
@@ -64,6 +68,7 @@ a {
 
 .font-8 {
     font-size: 8.2rem;
+    color: red;
 }
 
 .flex {
