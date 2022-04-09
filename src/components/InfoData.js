@@ -11,7 +11,7 @@ const InfoData = ({ data }) => {
                     if (!value?.numberOne) {
                         return (<p className='font-6 pad-tb-2'>{normalKey}: {value}</p>)
                     } else {
-                        return ((<div className='question flex justify-center align-center'>
+                        return ((<div className='question flex align-center'>
                             <p className='font-5'>{value.numberOne} x {value.numberTwo} = {value.correctAnswer}</p>
                             <span className='isCorrect'>
                                 {

@@ -5,7 +5,7 @@ import shuffleArray from "../utils/ShuffleArray";
 const GameInfoContext = createContext();
 
 const GameInfoContextProvider = ({ children }) => {
-  const [step, setstep] = useState(1);
+  const [step, setstep] = useState(0);
   const [tour, setTour] = useState(1);
   const [question, setQuestion] = useState()
 

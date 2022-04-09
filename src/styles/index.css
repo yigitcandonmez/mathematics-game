@@ -186,7 +186,8 @@ svg {
     justify-content: space-evenly;
 }
 
-.question span {
-    padding-left: 2rem;
+.question {
+    padding: 0 5rem;
+    justify-content: space-between;
 }
 /* Pages End */

@@ -31,10 +31,10 @@ const Game = () => {
   }
 
   useEffect(() => {
-    if (step === "end") {
+    if (step + 1 === 11) {
       navigate("/final");
       setTour((prevTour) => prevTour + 1);
-      setstep(1);
+      setstep(0);
     }
     setCurrentAnswer()
     setBackgroundColor("default")
@@ -46,14 +46,14 @@ const Game = () => {
         return {
           Total_Point: prevInfo.Total_Point + question?.score,
           Correct_Answers: prevInfo.Correct_Answers + 1,
-          Total_Questions: prevInfo.Total_Questions + 1 !== 11 ? prevInfo.Total_Questions + 1 : prevInfo.Total_Questions
+          Total_Questions: prevInfo.Total_Questions + 1 !== 12 ? prevInfo.Total_Questions + 1 : prevInfo.Total_Questions
         }
       })
     } else if (typeof currentAnswer !== "undefined" && currentAnswer !== question?.correctAnswer) {
       setCurrentInfo((prevInfo) => {
         return {
           ...prevInfo,
-          Total_Questions: prevInfo.Total_Questions + 1 !== 11 ? prevInfo.Total_Questions + 1 : prevInfo.Total_Questions
+          Total_Questions: prevInfo.Total_Questions + 1 !== 12 ? prevInfo.Total_Questions + 1 : prevInfo.Total_Questions
         }
       })
     }
@@ -83,7 +83,7 @@ const Game = () => {
         <div className="page-game-info flex justify-center">
           <h2>Total Point: {currentInfo.Total_Point}</h2>
           <h2>Tour: {tour}</h2>
-          <h2>Questions: {currentInfo.Correct_Answers}/{currentInfo.Total_Questions}</h2>
+          <h2>Questions: {currentInfo.Correct_Answers}/{currentInfo.Total_Questions - 1}</h2>
         </div>
         <div className="page-game-answers flex justify-center align-center">
           {

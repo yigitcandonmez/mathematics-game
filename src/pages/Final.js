@@ -7,7 +7,7 @@ const CONSTANT_SESSION_KEY = "mathematics-game-sectionData";
 
 const Final = () => {
     const [finalData, setFinalData] = useStorage("local", CONSTANT_LOCAL_KEY);
-    const [finalSessionData] = useStorage("session", CONSTANT_SESSION_KEY);
+    const [finalSessionData, setFinalSessionData] = useStorage("session", CONSTANT_SESSION_KEY);
 
     const { Total_Point, Total_Questions, Correct_Answers, Questions } = finalSessionData;
 
@@ -17,6 +17,14 @@ const Final = () => {
             Correct_Answers: finalData.Correct_Answers + finalSessionData.Correct_Answers,
             Total_Questions: finalData.Total_Questions + finalSessionData.Total_Questions
         })
+
+        // return () => {
+        //     setFinalSessionData({
+        //         Total_Point: 0,
+        //         Correct_Answers: [],
+        //         Total_Questions: 0
+        //     })
+        // }
     }, [])
 
     return (
